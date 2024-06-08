@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: #fff;
+}
+
+.left-links a {
+    color: inherit;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.right-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.theme-buttons button {
+    margin-right: 10px;
+}
+
+#contact-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#contact-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

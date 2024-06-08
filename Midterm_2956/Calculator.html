@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <header>
+        <div class="left-links">
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank">HTML5</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>
+            <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction" target="_blank">Bootstrap</a>
+        </div>
+        <div class="right-buttons">
+            <div class="theme-buttons together">
+                <button id="dark-btn">Dark</button>
+                <button id="light-btn">Light</button>
+            </div>
+            
+            <button class="btn btn-primary">Contact Me</button>
+        </nav>
+    </header>
+    <style>
+         body {
+        background-color: #434040ea; /* Dark background color */
+        color: #ffffff; /* Text color */
+    }
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .row {
+        display: flex;
+        width: 80%;
+        margin-left: 5%;
+    }
+    .column {
+        flex: 3;
+        padding: 10px;
+    }
+    .column:nth-child(1) {
+        flex: 1/6;
+    }
+    .column:nth-child(2) {
+        flex: 5/6;
+    }
+    .factorial-message {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+    .input-container {
+        width: 70%;
+        height: 340px;
+        display: flex;
+        align-items: center;
+        padding: 0px;
+    }
+    .input-box {
+        width: 90%;
+        height: 340px;
+        font-size: 2rem;
+    }
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+    }
+    .enter-button {
+        padding: 20px 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .result-screen {
+        background-color: #8a877d;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 2rem;
+    }
+</style>
+</head>
+<body>
+<!-- First Row -->
+<div class="row">
+    <div class="column" style="flex: 1/6;">
+        <div class="factorial-message">
+            Factorial calculator: 
+
+            
+        </div>
+    </div>
+    <div class="column" style="flex: 5/6;">
+        <div class="input-container">
+            <input type="number" class="input-box" placeholder="Enter a number">
+        </div>
+    </div>
+</div>
+
+<!-- Second Row -->
+<div class="row">
+    <div class="column" style="flex: 1/6;">
+        <div class="button-container">
+            <button class="enter-button">Enter</button>
+        </div>
+    </div>
+    <div class="column" style="flex: 5/6;">
+        <div class="result-screen" id="result-screen"></div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.enter-button').addEventListener('click', function() {
+        var input = parseInt(document.querySelector('.input-box').value);
+        var factorial = 1;
+        for (let i = 1; i <= input; i++) {
+            factorial *= i;
+        }
+        document.getElementById('result-screen').innerText = input + '! = ' + factorial;
+    });
+</script>
+    <footer class="footer"> <!-- Add the footer element that is fixed-->
+        Simple factorial calculator @ 2024
+      </footer>
+      <link rel="stylesheet" href="css/footer.css">
+    
+    <script src="js/script.js"></script>
+    <script src="./js/darkmodetoggle.js"></script>
+</body>
+</html>
